@@ -162,7 +162,7 @@ std::string Parser::ParseStructHead(std::string line)
 		return "";
 
 	std::string structId = "struct";
-	int pos = lineNoSpaces.find(structId);
+	size_t pos = lineNoSpaces.find(structId);
 	if (pos != 0)
 		return "";
 
@@ -189,7 +189,7 @@ DBCMember Parser::ParseMember(std::string line)
 
 	// USED
 	member.used = true;
-	int pos = segments[0].find("//");
+    size_t pos = segments[0].find("//");
 	if (segments[0].size() > 1 && pos != std::string::npos)
 	{
 		if (pos + 2 != segments[0].size())
@@ -257,8 +257,8 @@ void Parser::ConsumeSpecialMembers()
 
 int Parser::ParseMemberEntries(std::string line)
 {
-	int leftBracketPos = line.find_first_of("[");
-	int rightBracketPos = line.find_first_of("]");
+    size_t leftBracketPos = line.find_first_of("[");
+    size_t rightBracketPos = line.find_first_of("]");
 
 	if (leftBracketPos != std::string::npos && rightBracketPos != std::string::npos)
 	{
@@ -273,14 +273,14 @@ int Parser::ParseMemberEntries(std::string line)
 
 	std::string remaining = line.substr(rightBracketPos + 1, line.size() - rightBracketPos - 1);
 	
-	int afterCommentPos = remaining.find_first_of("//") + 2;
+    size_t afterCommentPos = remaining.find_first_of("//") + 2;
 	std::string sizeString = StringHelper::RemoveSpaces(remaining.substr(afterCommentPos));
 
 	int startEntry = -1;
 	int endEntry = -1;
 	
 	// Find the start entry
-	int pos = sizeString.find_first_of("-");
+    size_t pos = sizeString.find_first_of("-");
 	if (pos != std::string::npos)
 		startEntry = std::stoi(sizeString.substr(0, pos));
 
@@ -304,7 +304,7 @@ std::string Parser::ParseMemberName(std::string name)
 	name = StringHelper::RemoveCharacter(name, ';');
 
 	//Get rid of bracket
-	int leftBracketPos = name.find('[');
+    size_t leftBracketPos = name.find('[');
 	if (leftBracketPos != std::string::npos)
 		name = name.substr(0, leftBracketPos);
 

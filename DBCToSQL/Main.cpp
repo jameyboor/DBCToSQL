@@ -220,14 +220,14 @@ int main()
         const size_t rowLength = rows.size();
         size_t count = 0;
         size_t percentCount = 0;
-        const double percentual = rowLength / 100;
+        const long double percentual = static_cast<long double>(rowLength) / 100;
 		for (const auto& row : rows)
 		{
             auto percent = count / percentual;
             if (static_cast<size_t>(percent) % 10 != 0 && percentCount != static_cast<size_t>(percent) / 10)
             {
                 std::cout << "%";
-                percentCount = percent / 10;
+                percentCount = static_cast<size_t>(percent / 10);
             }
 
             std::ostringstream ss;

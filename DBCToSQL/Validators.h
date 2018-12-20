@@ -19,7 +19,7 @@ namespace Validators
 		{
 			for (std::string const& valid : validStrings_)
 			{
-				int foundPos = str.find(valid);
+                size_t foundPos = str.find(valid);
 				if (foundPos != std::string::npos && foundPos == 0)
 					return true;
 			}
