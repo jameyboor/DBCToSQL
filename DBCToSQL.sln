@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DBCToSQL", "DBCToSQL\DBCToSQL.vcxproj", "{6B44898B-F334-460D-9BA8-9AE92E809935}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B44898B-F334-460D-9BA8-9AE92E809935}.Debug|x64.ActiveCfg = Debug|x64
+		{6B44898B-F334-460D-9BA8-9AE92E809935}.Debug|x64.Build.0 = Debug|x64
+		{6B44898B-F334-460D-9BA8-9AE92E809935}.Debug|x86.ActiveCfg = Debug|Win32
+		{6B44898B-F334-460D-9BA8-9AE92E809935}.Debug|x86.Build.0 = Debug|Win32
+		{6B44898B-F334-460D-9BA8-9AE92E809935}.Release|x64.ActiveCfg = Release|x64
+		{6B44898B-F334-460D-9BA8-9AE92E809935}.Release|x64.Build.0 = Release|x64
+		{6B44898B-F334-460D-9BA8-9AE92E809935}.Release|x86.ActiveCfg = Release|Win32
+		{6B44898B-F334-460D-9BA8-9AE92E809935}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AFC2DC9F-361F-4521-B75E-7A1DCC4F8F0E}
+	EndGlobalSection
+EndGlobal
